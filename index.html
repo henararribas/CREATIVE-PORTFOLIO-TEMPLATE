@@ -1,151 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Graphic Design</title>
     <link rel="stylesheet" href="./assets/css/index.css">
-    <script src="./assets/js/main.js"></script>
 </head>
 <body>
-	<!-- Skip link for accessibility -->
-	<a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="logo">Your name and surname</div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+        </nav>
+    </header>
 
-	<!-- Navigation -->
-	<nav class="nav">
-		<div class="nav-container">
-			<a href="#" class="nav-logo">Portfolio</a>
-			<ul class="nav-links">
-				<li><a href="#hero">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-	</nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Graphic design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis. Fusce in metus laoreet, tincidunt mauris a, lacinia ligula. Nunc vel orci et ligula bibendum malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+    </section>
 
-	<main id="main">
-		<!-- Hero Section -->
-		<section id="hero" class="hero">
-			<div class="hero-bg parallax-bg"></div>
-			<div class="hero-content">
-				<h1 class="hero-title animate-on-scroll">Jane Developer</h1>
-				<p class="hero-subtitle animate-on-scroll">Front-End Engineer & UI Designer</p>
-				<a href="#projects" class="btn animate-on-scroll">View My Work</a>
-			</div>
-			</div>
-		</section>
+    <section class="abilities">
+        <h2>My abilities</h2>
+        <div class="abilities-intro">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis.</p>
+        </div>
+        <div class="abilities-list">
+            <div class="ability-item">
+                <div class="ability-header">
+                    <h3>Ability 1</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="ability-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis.</p>
+                </div>
+            </div>
+            <div class="ability-item">
+                <div class="ability-header">
+                    <h3>Ability 2</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="ability-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis.</p>
+                </div>
+            </div>
+            <div class="ability-item">
+                <div class="ability-header">
+                    <h3>Ability 3</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="ability-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis.</p>
+                </div>
+            </div>
+            <div class="ability-item">
+                <div class="ability-header">
+                    <h3>Ability 4</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="ability-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu velit id massa pellentesque hendrerit vitae suscipit leo. In lacinia massa vel aliquet mattis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<!-- About Section -->
-		<section id="about" class="section about">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">About Me</h2>
-				<div class="about-grid">
-					<div class="about-text animate-on-scroll">
-						<p>
-							I'm a passionate front-end developer with 5 years of experience
-							building responsive, accessible, and performant web applications.
-						</p>
-						<p>
-							My focus is on creating seamless user experiences through clean code
-							and thoughtful design. I believe in the power of vanilla JavaScript
-							and modern CSS to create stunning interfaces without framework bloat.
-						</p>
-					</div>
-					<div class="skills-grid" data-reveal-stagger>
-						<div class="skill-card">
-							<span class="skill-icon">🎨</span>
-							<h3>CSS/Sass</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 95%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">⚡</span>
-							<h3>JavaScript</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 90%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">📱</span>
-							<h3>Responsive</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 98%"></div></div>
-						</div>
-						<div class="skill-card">
-							<span class="skill-icon">♿</span>
-							<h3>A11y</h3>
-							<div class="skill-bar"><div class="skill-fill" style="--fill: 85%"></div></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+    <section class="portfolio">
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop" alt="Portfolio 1">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop" alt="Portfolio 2">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop" alt="Portfolio 3">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&h=400&fit=crop" alt="Portfolio 4">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=600&h=400&fit=crop" alt="Portfolio 5">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&h=400&fit=crop" alt="Portfolio 6">
+            </div>
+        </div>
+    </section>
 
-		<!-- Projects Section -->
-		<section id="projects" class="section projects">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">Featured Projects</h2>
-				<div class="projects-grid" data-reveal-stagger>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=1" alt="E-commerce Platform" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>E-commerce Platform</h3>
-							<p>A fully responsive online store with cart functionality and payment integration.</p>
-							<div class="project-tags">
-								<span>HTML</span><span>CSS</span><span>JS</span>
-							</div>
-						</div>
-					</article>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=2" alt="Dashboard UI" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>Analytics Dashboard</h3>
-							<p>Real-time data visualization dashboard with dark mode support.</p>
-							<div class="project-tags">
-								<span>CSS Grid</span><span>Charts</span><span>API</span>
-							</div>
-						</div>
-					</article>
-					<article class="project-card">
-						<div class="project-image">
-							<img src="https://picsum.photos/400/300?random=3" alt="Mobile App Landing" loading="lazy" />
-						</div>
-						<div class="project-content">
-							<h3>App Landing Page</h3>
-							<p>Conversion-optimized landing page with scroll animations.</p>
-							<div class="project-tags">
-								<span>Animation</span><span>A/B Test</span><span>SEO</span>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<!-- Contact Section -->
-		<section id="contact" class="section contact">
-			<div class="container">
-				<h2 class="section-title animate-on-scroll">Get In Touch</h2>
-				<div class="contact-content animate-on-scroll">
-					<p>Interested in working together? Let's talk about your project.</p>
-					<a href="mailto:hello@example.com" class="btn btn-primary">Say Hello</a>
-					<div class="social-links">
-						<a href="#" aria-label="GitHub">GitHub</a>
-						<a href="#" aria-label="LinkedIn">LinkedIn</a>
-						<a href="#" aria-label="Twitter">Twitter</a>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
-
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-			<p>&copy; 2025 Jane Developer. Built with vanilla HTML, CSS & JS.</p>
-			<a href="#hero" class="back-to-top" aria-label="Back to top">↑</a>
-		</div>
-	</footer>
+    <section class="contact">
+        <h2>Contact<br>me</h2>
+        <div class="contact-info">
+            <p>youremail@yourmail.com</p>
+            <p>@yoursocialmedia</p>
+        </div>
+    </section>
 </body>
 </html>
