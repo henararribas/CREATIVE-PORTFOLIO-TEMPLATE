@@ -1,10 +1,13 @@
 body {
-	background-color: var(--bs-body-bg);
+	background: linear-gradient(135deg, #0c0668 10%, #ff8534 50%, hsl(49, 100%, 77%) 100%);
+	background-attachment: fixed;
 	color: var(--bs-body-color);
 }
 
 .bg-dark {
 	background-color: var(--color-bg-alt) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 }
 
 /* Section spacing */
