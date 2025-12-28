@@ -1,142 +1,33 @@
-.logo {
-    font-size: 14px;
-    color: #333;
+/* --------------------------------------------------------------------------
+   8. Buttons
+   -------------------------------------------------------------------------- */
+.btn-primary {
+	background: var(--bs-primary);
+	border-color: var(--bs-primary);
+	padding: 0.75rem 2rem;
+	font-weight: 600;
+	transition: transform 0.3s, box-shadow 0.3s;
 }
 
-nav {
-    display: flex;
-    gap: 30px;
+.btn-primary:hover {
+	background: #818cf8;
+	border-color: #818cf8;
+	transform: translateY(-2px);
+	box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    transition: opacity 0.3s;
+.btn-outline-light {
+	padding: 0.75rem 2rem;
+	font-weight: 600;
 }
 
-nav a:hover {
-    opacity: 0.7;
+.btn-outline-light:hover {
+	transform: translateY(-2px);
 }
 
-.hero-content {
-    max-width: 600px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-}
-
-.abilities h2 {
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.abilities-intro {
-    max-width: 600px;
-    margin-bottom: 50px;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-}
-
-.ability-item {
-    border-bottom: 1px solid #333;
-    cursor: pointer;
-}
-
-.ability-header {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: padding-left 0.3s;
-}
-
-.ability-item:hover .ability-header {
-    padding-left: 10px;
-}
-
-.ability-item h3 {
-    font-size: 24px;
-    font-weight: 400;
-}
-
-.ability-item .icon {
-    font-size: 28px;
-    font-weight: 300;
-    transition: transform 0.3s;
-}
-
-.ability-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.5s ease;
-    padding: 0;
-}
-
-.ability-item:hover .ability-content {
-    max-height: 200px;
-    padding-bottom: 20px;
-}
-
-.ability-item:hover .icon {
-    transform: rotate(45deg);
-}
-
-.ability-content p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 40px;
-    max-width: 1200px;
-}
-
-.portfolio-item {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-}
-
-.portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.contact h2 {
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1.1;
-}
-
-.contact-info {
-    text-align: right;
-    font-size: 14px;
-}
-
-.contact-info p {
-    margin-bottom: 5px;
+/* --------------------------------------------------------------------------
+   9. Utilities
+   -------------------------------------------------------------------------- */
+.z-1 {
+	z-index: 1;
 }
