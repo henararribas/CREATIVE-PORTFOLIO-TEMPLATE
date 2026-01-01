@@ -8,7 +8,7 @@
 
 	/* Custom tokens */
 	--color-bg-alt: rgba(255, 255, 255, 0.132);
-	--color-muted: #7669ae;
+	--color-muted: #ffffff;
 	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -30,3 +30,6 @@ body {
 	padding-bottom: 6rem !important;
 }
 
+.text-muted {
+	color: #ffffff !important;
+}
