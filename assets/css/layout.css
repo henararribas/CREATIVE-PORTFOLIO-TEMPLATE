@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(135deg, #0c0668 10%, #ff8534 50%, hsl(49, 100%, 77%) 100%);
+	background: linear-gradient(135deg, #0c0668 10%, #9796ed 50%, hsl(48, 100%, 99%) 100%);
 	background-attachment: fixed;
 	color: var(--bs-body-color);
 }

@@ -2,14 +2,13 @@
    1. CSS Custom Properties
    -------------------------------------------------------------------------- */
 :root {
-	--bs-body-bg: linear-gradient(135deg, #0c0668 10%, #ff8534 50%, hsl(49, 100%, 77%) 100%);
 	--bs-body-color: #ffffff;
-	--bs-primary: #b4b5fb;
+	--bs-primary: #ffffff;
 	--bs-primary-rgb: 99, 102, 241;
 
 	/* Custom tokens */
 	--color-bg-alt: rgba(255, 255, 255, 0.132);
-	--color-muted: #ffffff;
+	--color-muted: #7669ae;
 	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -17,8 +16,8 @@
    2. Base Overrides
    -------------------------------------------------------------------------- */
 body {
-	background-color: var(--bs-body-bg);
-	color: var(--bs-body-color);
+	background-color: #ffffff;
+	color: #ffffff;
 }
 
 .bg-dark {

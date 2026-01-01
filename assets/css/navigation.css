@@ -56,13 +56,13 @@
 
 /* Skills progress bars */
 .progress {
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(78, 63, 176, 0.323);
 	border-radius: 4px;
 	overflow: hidden;
 }
 
 .progress-bar {
-	background: linear-gradient(90deg, var(--bs-primary), #ffffff);
+	background: linear-gradient(90deg, var(--bs-primary), rgb(255, 255, 255));
 	border-radius: 4px;
 	width: 0; /* Animated by GSAP */
 }
@@ -79,7 +79,7 @@
 
 .project-card:hover {
 	transform: translateY(-8px);
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 20px 40px rgba(32, 22, 93, 0.4);
 }
 
 .card-img-wrapper {
@@ -107,7 +107,7 @@
 
 /* Badge styling */
 .bg-primary-subtle {
-	background-color: rgba(99, 102, 241, 0.15) !important;
+	background-color: rgba(255, 255, 255, 0.15) !important;
 }
 
 .text-primary {
