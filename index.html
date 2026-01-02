@@ -3,7 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Grade 2 Demo: Bootstrap + GSAP Scroll</title>
+	<title>Grade 2 Demo: Bootstrap + GSAP Scroll + Fluid Typography</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,8 +16,7 @@
 	<!-- Custom Styles -->
 	<link rel="stylesheet" href="./assets/css/index.css">
 </head>
-<body>
-    <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 	<!-- Navigation -->
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
 		<div class="container">
@@ -35,21 +39,19 @@
 		<!-- Hero Section -->
 		<section id="hero" class="hero min-vh-100 d-flex align-items-center position-relative overflow-hidden">
 			<!-- Parallax Background -->
-			<div class="hero-bg position-absolute w-100 h-100" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);"></div>
-
-			<!-- Floating shapes (GSAP animated) -->
+			<div class="hero-bg position-absolute w-100 h-100"></div>
 
 			<div class="container position-relative z-1 text-center text-white">
-				<h1 class="display-1 fw-bold hero-title" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">John Designer</h1>
-				<p class="lead hero-subtitle mb-4" style="translate: none; rotate: none; scale: none; opacity: 0.8; transform: translate(0px, 0px);">Full-Stack Developer &amp; Creative Technologist</p>
-				<div class="hero-cta" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+				<h1 class="fw-bold hero-title">John Designer</h1>
+				<p class="lead hero-subtitle mb-4">Full-Stack Developer & Creative Technologist</p>
+				<div class="hero-cta">
 					<a href="#projects" class="btn btn-primary btn-lg me-3">View Projects</a>
 					<a href="#contact" class="btn btn-outline-light btn-lg">Get in Touch</a>
 				</div>
 			</div>
 
 			<!-- Scroll indicator -->
-			<div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4" style="opacity: 1;">
+			<div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
 				<div class="mouse"></div>
 			</div>
 		</section>
@@ -59,18 +61,15 @@
 			<div class="container">
 				<div class="row align-items-center g-5">
 					<div class="col-lg-6">
-						<div class="about-image gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							<img src="https://picsum.photos/600/700?random=10" alt="Profile" class="img-fluid rounded-4 shadow-lg">
+						<div class="about-image gsap-reveal">
+							<img src="https://picsum.photos/600/700?random=10" alt="Profile picture" class="img-fluid rounded-4 shadow-lg">
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<h2 class="display-5 fw-bold mb-4 gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">About Me</h2>
-						<p class="lead text-muted mb-4 gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<h2 class="fw-bold mb-4 gsap-reveal">About Me</h2>
+						<p class="text-muted gsap-reveal">
 							I'm a creative developer passionate about building beautiful,
-							functional, and accessible digital experiences.
-						</p>
-						<p class="text-muted gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
-							With 7+ years of experience spanning front-end development, UI/UX
+							functional, and accessible digital experiences. With 7+ years of experience spanning front-end development, UI/UX
 							design, and motion graphics, I bring a unique perspective to every
 							project. I believe in the power of animation to enhance user
 							experience without sacrificing performance.
@@ -78,31 +77,31 @@
 
 						<!-- Skills with animated progress -->
 						<div class="skills mt-5">
-							<div class="skill-item gsap-reveal mb-3" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+							<div class="skill-item gsap-reveal mb-3">
 								<div class="d-flex justify-content-between mb-2">
 									<span class="fw-semibold">React / Next.js</span>
 									<span class="text-muted">95%</span>
 								</div>
 								<div class="progress" style="height: 8px">
-									<div class="progress-bar skill-bar" data-width="95" style="width: 95%;"></div>
+									<div class="progress-bar skill-bar" data-width="95"></div>
 								</div>
 							</div>
-							<div class="skill-item gsap-reveal mb-3" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+							<div class="skill-item gsap-reveal mb-3">
 								<div class="d-flex justify-content-between mb-2">
 									<span class="fw-semibold">GSAP / Animation</span>
 									<span class="text-muted">90%</span>
 								</div>
 								<div class="progress" style="height: 8px">
-									<div class="progress-bar skill-bar" data-width="90" style="width: 90%;"></div>
+									<div class="progress-bar skill-bar" data-width="90"></div>
 								</div>
 							</div>
-							<div class="skill-item gsap-reveal mb-3" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+							<div class="skill-item gsap-reveal mb-3">
 								<div class="d-flex justify-content-between mb-2">
 									<span class="fw-semibold">Node.js / Express</span>
 									<span class="text-muted">85%</span>
 								</div>
 								<div class="progress" style="height: 8px">
-									<div class="progress-bar skill-bar" data-width="85" style="width: 85%;"></div>
+									<div class="progress-bar skill-bar" data-width="85"></div>
 								</div>
 							</div>
 						</div>
@@ -115,14 +114,14 @@
 		<section id="projects" class="py-5 py-lg-6">
 			<div class="container">
 				<div class="text-center mb-5">
-					<h2 class="display-5 fw-bold gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Featured Projects</h2>
-					<p class="lead text-muted gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">A selection of my recent work</p>
+					<h2 class="fw-bold gsap-reveal">Featured Projects</h2>
+					<p class="lead text-muted gsap-reveal">A selection of my recent work</p>
 				</div>
 
 				<div class="row g-4">
 					<!-- Project Card 1 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=1" class="card-img-top" alt="E-commerce Platform">
 							</div>
@@ -142,7 +141,7 @@
 
 					<!-- Project Card 2 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 52.6985px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=2" class="card-img-top" alt="Dashboard UI">
 							</div>
@@ -162,7 +161,7 @@
 
 					<!-- Project Card 3 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 59.6897px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=3" class="card-img-top" alt="Mobile App">
 							</div>
@@ -181,7 +180,7 @@
 
 					<!-- Project Card 4 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=4" class="card-img-top" alt="Portfolio Site">
 							</div>
@@ -200,7 +199,7 @@
 
 					<!-- Project Card 5 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 51.8363px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=5" class="card-img-top" alt="SaaS Platform">
 							</div>
@@ -219,7 +218,7 @@
 
 					<!-- Project Card 6 -->
 					<div class="col-md-6 col-lg-4">
-						<article class="card project-card h-100 border-0 shadow-sm" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 59.7481px);">
+						<article class="card project-card h-100 border-0 shadow-sm">
 							<div class="card-img-wrapper overflow-hidden">
 								<img src="https://picsum.photos/400/300?random=6" class="card-img-top" alt="AI Tool">
 							</div>
@@ -244,16 +243,16 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-lg-8 text-center">
-						<h2 class="display-5 fw-bold mb-4 gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Let's Work Together</h2>
-						<p class="lead text-muted mb-5 gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<h2 class="fw-bold mb-4 gsap-reveal">Let's Work Together</h2>
+						<p class="lead text-muted mb-5 gsap-reveal">
 							Have a project in mind? I'd love to hear about it. Let's create something amazing.
 						</p>
-						<div class="gsap-reveal" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<div class="gsap-reveal">
 							<a href="mailto:hello@example.com" class="btn btn-primary btn-lg mb-4">
 								Start a Conversation
 							</a>
 						</div>
-						<div class="social-links gsap-reveal d-flex justify-content-center gap-4" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+						<div class="social-links gsap-reveal d-flex justify-content-center gap-4">
 							<a href="#" class="text-muted fs-4" aria-label="GitHub">
 								<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
 							</a>
@@ -273,7 +272,7 @@
 	<!-- Footer -->
 	<footer class="py-4 text-center text-muted small">
 		<div class="container">
-			<p class="mb-0">© 2025 John Designer. Built with Bootstrap 5 + GSAP.</p>
+			<p class="mb-0">© 2025 John Designer. Built with Bootstrap 5 + GSAP + Fluid Typography.</p>
 		</div>
 	</footer>
 
@@ -287,8 +286,5 @@
 
 	<!-- Custom Scripts -->
 	<script src="./assets/js/main.js"></script>
-
-
-<span style="border-radius:10px !important;text-indent:12px !important;width:auto !important;height:20px !important;padding:0px 8px !important;text-align:center !important;vertical-align:middle !important;font:bold 11px / 20px &quot;Helvetica Neue&quot;, Helvetica, sans-serif !important;color:rgb(255, 255, 255) !important;background:url(&quot;data:image/svg+xml;base64,PHN2ZyBpZD0ic291cmNlIiB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNFNjAwMjMiPjwvY2lyY2xlPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAgNkMwIDguNTYxNSAxLjYwNTUgMTAuNzQ4NSAzLjg2NSAxMS42MDlDMy44MSAxMS4xNDA1IDMuNzUxNSAxMC4zNjggMy44Nzc1IDkuODI2QzMuOTg2IDkuMzYgNC41NzggNi44NTcgNC41NzggNi44NTdDNC41NzggNi44NTcgNC4zOTk1IDYuNDk5NSA0LjM5OTUgNS45N0M0LjM5OTUgNS4xNCA0Ljg4MDUgNC41MiA1LjQ4IDQuNTJDNS45OSA0LjUyIDYuMjM2IDQuOTAyNSA2LjIzNiA1LjM2MUM2LjIzNiA1Ljg3MzUgNS45MDk1IDYuNjM5NSA1Ljc0MSA3LjM1QzUuNjAwNSA3Ljk0NDUgNi4wMzk1IDguNDI5NSA2LjYyNTUgOC40Mjk1QzcuNjg3IDguNDI5NSA4LjUwMzUgNy4zMSA4LjUwMzUgNS42OTRDOC41MDM1IDQuMjYzNSA3LjQ3NTUgMy4yNjQgNi4wMDggMy4yNjRDNC4zMDkgMy4yNjQgMy4zMTE1IDQuNTM4NSAzLjMxMTUgNS44NTZDMy4zMTE1IDYuMzY5NSAzLjUwOSA2LjkxOTUgMy43NTYgNy4yMTlDMy44MDQ1IDcuMjc4NSAzLjgxMiA3LjMzIDMuNzk3NSA3LjM5MDVDMy43NTIgNy41Nzk1IDMuNjUxIDcuOTg1IDMuNjMxNSA4LjA2OEMzLjYwNSA4LjE3NyAzLjU0NSA4LjIwMDUgMy40MzE1IDguMTQ3NUMyLjY4NTUgNy44MDA1IDIuMjE5NSA2LjcxIDIuMjE5NSA1LjgzNEMyLjIxOTUgMy45NDk1IDMuNTg4IDIuMjE5NSA2LjE2NTUgMi4yMTk1QzguMjM3NSAyLjIxOTUgOS44NDggMy42OTYgOS44NDggNS42NjlDOS44NDggNy43Mjc1IDguNTUwNSA5LjM4NDUgNi43NDg1IDkuMzg0NUM2LjE0MyA5LjM4NDUgNS41NzQ1IDkuMDY5NSA1LjM3OTUgOC42OThDNS4zNzk1IDguNjk4IDUuMDggOS44MzkgNS4wMDc1IDEwLjExOEM0Ljg2NjUgMTAuNjYgNC40NzU1IDExLjM0NiA0LjIzMyAxMS43MzU1QzQuNzkyIDExLjkwNzUgNS4zODUgMTIgNiAxMkM5LjMxMzUgMTIgMTIgOS4zMTM1IDEyIDZDMTIgMi42ODY1IDkuMzEzNSAwIDYgMEMyLjY4NjUgMCAwIDIuNjg2NSAwIDZaIiBmaWxsPSJ3aGl0ZSI+PC9wYXRoPgo8L3N2Zz4=&quot;) 4px 50% / 12px 12px no-repeat rgb(230, 0, 35) !important;position:absolute !important;opacity:1 !important;z-index:9007199254740990 !important;display:none !important;cursor:pointer !important;border:none !important;-webkit-font-smoothing:antialiased !important;top:0 !important;left:0 !important;display:none !important;top:2386px !important;left:562px !important">Guardar</span></body>
 </body>
 </html>

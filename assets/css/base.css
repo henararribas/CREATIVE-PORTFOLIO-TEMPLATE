@@ -10,14 +10,96 @@
 	--color-bg-alt: rgba(255, 255, 255, 0.132);
 	--color-muted: #ffffff;
 	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+	/* Typography System */
+	--font-primary: "Red Hat Text", sans-serif;
+	--font-heading: var(--font-primary);
+	
+	/* Fluid Typography Scale */
+	--font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+	--font-size-h1: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+	--font-size-h2: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+	--font-size-h3: clamp(1.75rem, 1.5rem + 1.25vw, 2.5rem);
+	--font-size-h4: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+	--font-size-h5: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+	--font-size-h6: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+	
+	/* Line heights */
+	--line-height-base: 1.6;
+	--line-height-heading: 1.2;
+	
+	/* Font weights */
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-semibold: 600;
+	--fw-bold: 700;
+	--fw-extrabold: 800;
 }
 
 /* --------------------------------------------------------------------------
-   2. Base Overrides
+   2. Base Overrides & Typography
    -------------------------------------------------------------------------- */
 body {
 	background-color: #ffffff;
 	color: #ffffff;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	font-family: var(--font-primary);
+}
+
+
+/* Fluid Typography Hierarchy */
+h1, .h1 {
+	font-size: var(--font-size-h1);
+	line-height: var(--line-height-heading);
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
+
+h2, .h2 {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-heading);
+	font-weight: 700;
+	margin-bottom: 0.25rem;
+}
+
+h3, .h3 {
+	font-size: var(--font-size-h3);
+	line-height: var(--line-height-heading);
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+h4, .h4 {
+	font-size: var(--font-size-h4);
+	line-height: var(--line-height-heading);
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+h5, .h5 {
+	font-size: var(--font-size-h5);
+	line-height: var(--line-height-heading);
+	font-weight: 500;
+	margin-bottom: 0.875rem;
+}
+
+h6, .h6 {
+	font-size: var(--font-size-h6);
+	line-height: var(--line-height-heading);
+	font-weight: 500;
+	margin-bottom: 0.75rem;
+}
+
+/* Lead text (intro paragraphs) */
+.lead {
+	font-size: clamp(1.125rem, 1rem + 0.625vw, 1.5rem) !important;
+	line-height: 1.5;
+}
+
+/* Small text */
+small, .small {
+	font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 }
 
 .bg-dark {
@@ -33,3 +115,4 @@ body {
 .text-muted {
 	color: #ffffff !important;
 }
+
