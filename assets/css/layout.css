@@ -1,20 +1,30 @@
+/* --------------------------------------------------------------------------
+   Layout & Background
+   -------------------------------------------------------------------------- */
 body {
-  background:
-    linear-gradient(60deg, rgba(12, 6, 104, 0.9), transparent 65%),
-    linear-gradient(120deg, rgba(79, 70, 203, 0.85), transparent 70%),
-    linear-gradient(180deg, rgba(44, 60, 151, 0.7), transparent 65%),
-    linear-gradient(240deg, rgba(39, 38, 109, 0.85), transparent 70%),
-    linear-gradient(300deg, rgba(14, 38, 117, 0.95), transparent 65%);
+	background:
+		linear-gradient(60deg, rgba(12, 6, 104, 0.9), transparent 65%),
+		linear-gradient(120deg, rgba(79, 70, 203, 0.85), transparent 70%),
+		linear-gradient(180deg, rgba(44, 60, 151, 0.7), transparent 65%),
+		linear-gradient(240deg, rgba(39, 38, 109, 0.85), transparent 70%),
+		linear-gradient(300deg, rgba(14, 38, 117, 0.95), transparent 65%);
 
-  background-size: 400% 400%;
-  background-position: 0% 50%;
-  background-attachment: fixed;
+	background-size: 400% 400%;
+	background-position: 0% 50%;
+	background-attachment: fixed;
 
-  animation: aurora 30s linear infinite;
+	animation: aurora 30s linear infinite;
 
-  color: var(--bs-body-color);
+	color: var(--bs-body-color);
 }
 
+@keyframes aurora {
+	0%   { background-position: 0% 50%; }
+	25%  { background-position: 50% 100%; }
+	50%  { background-position: 100% 50%; }
+	75%  { background-position: 50% 0%; }
+	100% { background-position: 0% 50%; }
+}
 
 /* Section spacing */
 .py-lg-6 {
@@ -22,10 +32,98 @@ body {
 	padding-bottom: 6rem !important;
 }
 
-@keyframes aurora {
-  0%   { background-position: 0% 50%; }
-  25%  { background-position: 50% 100%; }
-  50%  { background-position: 100% 50%; }
-  75%  { background-position: 50% 0%; }
-  100% { background-position: 0% 50%; }
+.bg-dark {
+	background-color: var(--color-bg-alt) !important;
+}
+
+/* --------------------------------------------------------------------------
+   About Section Layout
+   -------------------------------------------------------------------------- */
+.about-image {
+	position: relative;
+}
+
+.about-image::before {
+	content: '';
+	position: absolute;
+	inset: 20px -20px -20px 20px;
+	border: 2px solid var(--bs-primary);
+	border-radius: 1rem;
+	z-index: -1;
+}
+
+.about-image img {
+	position: relative;
+	z-index: 1;
+}
+
+/* Skills progress bars */
+.progress {
+	background-color: rgba(255, 255, 255, 0.323);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.progress-bar {
+	background: linear-gradient(90deg, var(--bs-primary), rgb(7, 0, 41));
+	border-radius: 4px;
+	width: 0; /* Animated by GSAP */
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.shape {
+		display: none;
+	}
+
+	.project-card:hover {
+		transform: none;
+	}
+
+	.project-card:hover .card-img-wrapper img {
+		transform: none;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+	.hero-title {
+		font-size: 3rem;
+	}
+
+	.shape {
+		transform: scale(0.6);
+	}
+}
+
+@media (max-width: 575.98px) {
+	.hero-title {
+		font-size: 2.5rem;
+	}
+
+	.hero-cta .btn {
+		display: block;
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.hero-cta .btn:last-child {
+		margin-bottom: 0;
+	}
+
+	.about-image::before {
+		display: none;
+	}
 }

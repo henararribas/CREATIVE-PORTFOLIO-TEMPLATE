@@ -395,22 +395,24 @@ function initProjectCards() {
 	if (prefersReducedMotion) return;
 
 	ScrollTrigger.batch('.project-card', {
-		/**
-		 * onEnter receives an array of ALL elements that just entered the viewport
-		 * (in this scroll frame). We animate them as a batch with stagger.
-		 */
-		onEnter: (batch) =>
+		onEnter: (batch) => {
+			// Añadir clase para identificar tarjetas animadas
+			batch.forEach(card => card.classList.add('gsap-animated'));
+			
 			gsap.from(batch, {
-				y: 60,           // Start 60px below
-				opacity: 0,      // Start invisible
+				y: 60,
+				opacity: 0,
 				duration: 0.8,
-				stagger: 0.15,   // 0.15s delay between each card
+				stagger: 0.15,
 				ease: 'power2.out',
-			}),
-		start: 'top 90%',   // Trigger when card top hits 90% of viewport
-		once: true,          // Only animate once (no re-triggering on scroll back)
+				clearProps: 'transform', // Limpia la propiedad transform después de la animación
+			});
+		},
+		start: 'top 90%',
+		once: true,
 	});
 }
+
 
 // ==========================================================================
 // 6. NAVBAR BACKGROUND ON SCROLL

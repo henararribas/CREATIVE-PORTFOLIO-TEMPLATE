@@ -4,15 +4,13 @@
 :root {
 	--bs-body-color: #ffffff;
 	--bs-primary: #ffffff;
-	--bs-primary-rgb: 99, 102, 241;
+	--bs-primary-rgb: #ffffff;
 
 	/* Custom tokens */
-	--color-bg-alt: rgba(255, 255, 255, 0.303);
-	--color-muted: #ffffff;
 	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
 	/* Typography System */
-	--font-primary: "Red Hat Text", sans-serif;
+	--font-primary: "Libre Bodoni", serif;
 	--font-heading: var(--font-primary);
 	
 	/* Fluid Typography Scale */
@@ -40,20 +38,20 @@
    2. Base Overrides & Typography
    -------------------------------------------------------------------------- */
 body {
-	background-color: #ffffff;
-	color: #ffffff;
+	background-color: #000000;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	font-family: var(--font-primary);
 }
 
-
 /* Fluid Typography Hierarchy */
+
 h1, .h1 {
 	font-size: var(--font-size-h1);
 	line-height: var(--line-height-heading);
 	font-weight: 700;
 	margin-bottom: 1.5rem;
+	color: #ffffff;
 }
 
 h2, .h2 {
@@ -61,6 +59,7 @@ h2, .h2 {
 	line-height: var(--line-height-heading);
 	font-weight: 700;
 	margin-bottom: 0.25rem;
+	color:#ffffff
 }
 
 h3, .h3 {
@@ -68,6 +67,7 @@ h3, .h3 {
 	line-height: var(--line-height-heading);
 	font-weight: 600;
 	margin-bottom: 1rem;
+	color:#ffffff
 }
 
 h4, .h4 {
@@ -75,6 +75,7 @@ h4, .h4 {
 	line-height: var(--line-height-heading);
 	font-weight: 600;
 	margin-bottom: 1rem;
+	color:#ffffff
 }
 
 h5, .h5 {
@@ -82,6 +83,7 @@ h5, .h5 {
 	line-height: var(--line-height-heading);
 	font-weight: 500;
 	margin-bottom: 0.875rem;
+	color:#ffffff
 }
 
 h6, .h6 {
@@ -89,6 +91,7 @@ h6, .h6 {
 	line-height: var(--line-height-heading);
 	font-weight: 500;
 	margin-bottom: 0.75rem;
+	color:#ffffff
 }
 
 /* Lead text (intro paragraphs) */
@@ -102,17 +105,6 @@ small, .small {
 	font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 }
 
-.bg-dark {
-	background-color: var(--color-bg-alt) !important;
-}
-
-/* Section spacing */
-.py-lg-6 {
-	padding-top: 6rem !important;
-	padding-bottom: 6rem !important;
-}
-
 .text-muted {
 	color: #ffffff !important;
 }
-

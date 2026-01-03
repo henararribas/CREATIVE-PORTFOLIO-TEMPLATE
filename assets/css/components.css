@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------------------
-   8. Buttons
+   Buttons
    -------------------------------------------------------------------------- */
 .btn-primary,
 .btn-outline-light {
@@ -19,21 +19,54 @@
 	transform: translateY(-2px);
 	box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
+
 /* --------------------------------------------------------------------------
-   9. Utilities
+   Utilities
    -------------------------------------------------------------------------- */
 .z-1 {
 	z-index: 1;
 }
 
 /* --------------------------------------------------------------------------
-   6. Projects Section
+   Projects Section - CSS Grid
    -------------------------------------------------------------------------- */
+.projects-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	align-items: start;
+}
+
+/* Media queries para mantener el responsiveness exacto de Bootstrap */
+@media (min-width: 768px) {
+	.projects-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.projects-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.projects-grid > div {
+	display: flex;
+}
+
 .project-card {
 	background: var(--color-bg-alt);
 	border-radius: 1rem;
 	overflow: hidden;
 	transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+/* Fix para el desalineamiento causado por GSAP */
+.project-card:not(.gsap-animated) {
+	transform: translateY(0) !important;
 }
 
 .project-card:hover {
@@ -43,6 +76,7 @@
 
 .card-img-wrapper {
 	aspect-ratio: 4/3;
+	flex-shrink: 0;
 }
 
 .card-img-wrapper img {
@@ -58,10 +92,18 @@
 
 .card-body {
 	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 .card-title {
 	margin-bottom: 0.75rem;
+}
+
+.card-text {
+	flex-grow: 1;
+	margin-bottom: 1rem;
 }
 
 /* Badge styling */
@@ -70,5 +112,5 @@
 }
 
 .text-primary {
-	color: var(--bs-primary) !important;
+	color: #ffffff !important;
 }

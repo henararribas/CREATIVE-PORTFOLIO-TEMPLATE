@@ -1,0 +1,102 @@
+/* --------------------------------------------------------------------------
+   Theme Customizations
+   -------------------------------------------------------------------------- */
+
+/**
+ * DESIGN TREND IMPLEMENTED: Animated Gradient Background
+ * 
+ * Modern web design trend featuring dynamic, multi-layered gradient
+ * backgrounds that create depth and visual interest through animation.
+ * 
+ * This creates a soft, peachy gradient effect that subtly shifts,
+ * adding movement and energy to the page without being distracting.
+ */
+
+/* --------------------------------------------------------------------------
+   Animated Gradient Background
+   -------------------------------------------------------------------------- */
+
+body {
+	background:
+		radial-gradient(circle at 20% 80%, rgba(255, 159, 130, 0.6) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(90, 136, 188, 0.4) 0%, transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(207, 190, 255, 0.5) 0%, transparent 60%),
+		linear-gradient(135deg, #7784ae 0%, #7281c0 50%, #e8c4a8 100%);
+
+	background-size: 150% 150%;
+	background-attachment: fixed;
+
+	animation: meshMove 25s ease-in-out infinite;
+
+	color: var(--bs-body-color);
+}
+
+@keyframes meshMove {
+	0%, 100% { 
+		background-position: 0% 0%, 100% 100%, 50% 50%, center; 
+	}
+	50% { 
+		background-position: 30% 70%, 70% 30%, 60% 40%, center; 
+	}
+}
+/* --------------------------------------------------------------------------
+   DESIGN TREND IMPLEMENTED: Glassmorphism
+   -------------------------------------------------------------------------- */
+
+/**
+ * Modern frosted glass effect that creates depth and hierarchy.
+ * Applied to: navbar, project cards, about section, contact section
+ * 
+ * Key characteristics:
+ * - Semi-transparent background
+ * - Backdrop blur and saturation
+ * - Subtle borders and shadows
+ * - Creates a floating, layered appearance
+ */
+
+.glass-effect {
+	/* Fondo semi-transparente - permite ver a través */
+	background: rgba(255, 255, 255, 0.15);
+	
+	/* ¡LA MAGIA DEL GLASSMORPHISM! */
+	backdrop-filter: blur(12px) saturate(150%);
+	-webkit-backdrop-filter: blur(12px) saturate(150%);
+	
+	/* Borde sutil añade definición */
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	
+	/* Esquinas redondeadas modernas */
+	border-radius: 20px;
+	
+	/* Profundidad con sombra interna y externa */
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+	            inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Aplicar glassmorphism al navbar */
+.navbar {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(12px) saturate(150%);
+	-webkit-backdrop-filter: blur(12px) saturate(150%);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* Glassmorphism para secciones de fondo */
+.section-glass {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px) saturate(120%);
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Future Theme Customizations
+   -------------------------------------------------------------------------- */
+
+/* Espacio para añadir más design trends:
+ * - Dark mode toggle
+ * - Neumorphism components
+ * - Alternative color schemes
+ * - Parallax effects
+ */
