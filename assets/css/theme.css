@@ -18,10 +18,10 @@
 
 body {
 	background:
-		radial-gradient(circle at 20% 80%, rgba(255, 159, 130, 0.6) 0%, transparent 50%),
-		radial-gradient(circle at 80% 20%, rgba(90, 136, 188, 0.4) 0%, transparent 50%),
-		radial-gradient(circle at 50% 50%, rgba(207, 190, 255, 0.5) 0%, transparent 60%),
-		linear-gradient(135deg, #7784ae 0%, #7281c0 50%, #e8c4a8 100%);
+		radial-gradient(circle at 20% 80%, rgba(47, 29, 114, 0.929) 0%, transparent 50%),
+		radial-gradient(circle at 80% 20%, rgba(65, 29, 131, 0.807) 0%, transparent 50%),
+		radial-gradient(circle at 50% 50%, rgba(22, 35, 136, 0.888) 0%, transparent 60%),
+		linear-gradient(135deg, #575296 0%, #271852 50%, #535276 100%);
 
 	background-size: 150% 150%;
 	background-attachment: fixed;

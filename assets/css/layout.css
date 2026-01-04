@@ -1,31 +1,3 @@
-/* --------------------------------------------------------------------------
-   Layout & Background
-   -------------------------------------------------------------------------- */
-body {
-	background:
-		linear-gradient(60deg, rgba(12, 6, 104, 0.9), transparent 65%),
-		linear-gradient(120deg, rgba(79, 70, 203, 0.85), transparent 70%),
-		linear-gradient(180deg, rgba(44, 60, 151, 0.7), transparent 65%),
-		linear-gradient(240deg, rgba(39, 38, 109, 0.85), transparent 70%),
-		linear-gradient(300deg, rgba(14, 38, 117, 0.95), transparent 65%);
-
-	background-size: 400% 400%;
-	background-position: 0% 50%;
-	background-attachment: fixed;
-
-	animation: aurora 30s linear infinite;
-
-	color: var(--bs-body-color);
-}
-
-@keyframes aurora {
-	0%   { background-position: 0% 50%; }
-	25%  { background-position: 50% 100%; }
-	50%  { background-position: 100% 50%; }
-	75%  { background-position: 50% 0%; }
-	100% { background-position: 0% 50%; }
-}
-
 /* Section spacing */
 .py-lg-6 {
 	padding-top: 6rem !important;
@@ -37,20 +9,24 @@ body {
 }
 
 /* --------------------------------------------------------------------------
+   Project Cards - Glassmorphism Enhanced (Navbar Style)
+   -------------------------------------------------------------------------- */
+.project-card {
+	background: rgba(255, 255, 255, 0.1) !important;
+	backdrop-filter: blur(12px) saturate(150%) !important;
+	-webkit-backdrop-filter: blur(12px) saturate(150%) !important;
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+	box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2) !important;
+}
+
+/* --------------------------------------------------------------------------
    About Section Layout
    -------------------------------------------------------------------------- */
 .about-image {
 	position: relative;
 }
 
-.about-image::before {
-	content: '';
-	position: absolute;
-	inset: 20px -20px -20px 20px;
-	border: 2px solid var(--bs-primary);
-	border-radius: 1rem;
-	z-index: -1;
-}
+/* RECTÁNGULO DECORATIVO ELIMINADO - Ya no existe el ::before */
 
 .about-image img {
 	position: relative;
@@ -59,13 +35,13 @@ body {
 
 /* Skills progress bars */
 .progress {
-	background-color: rgba(255, 255, 255, 0.323);
+	background-color: rgba(255, 255, 255, 0.347);
 	border-radius: 4px;
 	overflow: hidden;
 }
 
 .progress-bar {
-	background: linear-gradient(90deg, var(--bs-primary), rgb(7, 0, 41));
+	background: linear-gradient(90deg, var(--bs-primary), rgb(255, 255, 255));
 	border-radius: 4px;
 	width: 0; /* Animated by GSAP */
 }
@@ -123,6 +99,7 @@ body {
 		margin-bottom: 0;
 	}
 
+	/* Esta regla ya no es necesaria pero la mantengo por si acaso */
 	.about-image::before {
 		display: none;
 	}
