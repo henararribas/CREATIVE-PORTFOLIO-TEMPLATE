@@ -1,14 +1,14 @@
-/* --------------------------------------------------------------------------
-   Theme Customizations
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   THEME CUSTOMIZATIONS - Design Trends & Visual Effects
+   ========================================================================== */
 
 /**
- * DESIGN TREND IMPLEMENTED: Animated Gradient Background
+ * DESIGN TREND #1: Animated Gradient Background
  * 
  * Modern web design trend featuring dynamic, multi-layered gradient
  * backgrounds that create depth and visual interest through animation.
  * 
- * This creates a soft, peachy gradient effect that subtly shifts,
+ * This creates a soft, purple gradient mesh effect that subtly shifts,
  * adding movement and energy to the page without being distracting.
  */
 
@@ -25,9 +25,7 @@ body {
 
 	background-size: 150% 150%;
 	background-attachment: fixed;
-
 	animation: meshMove 25s ease-in-out infinite;
-
 	color: var(--bs-body-color);
 }
 
@@ -39,13 +37,22 @@ body {
 		background-position: 30% 70%, 70% 30%, 60% 40%, center; 
 	}
 }
+
+/* Disable animation for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	body {
+		animation: none;
+		background-position: center;
+	}
+}
+
 /* --------------------------------------------------------------------------
-   DESIGN TREND IMPLEMENTED: Glassmorphism
+   DESIGN TREND #2: Glassmorphism
    -------------------------------------------------------------------------- */
 
 /**
  * Modern frosted glass effect that creates depth and hierarchy.
- * Applied to: navbar, project cards, about section, contact section
+ * Applied to: navbar, project cards, sections
  * 
  * Key characteristics:
  * - Semi-transparent background
@@ -55,25 +62,26 @@ body {
  */
 
 .glass-effect {
-	/* Fondo semi-transparente - permite ver a través */
+	/* Semi-transparent background */
 	background: rgba(255, 255, 255, 0.15);
 	
-	/* ¡LA MAGIA DEL GLASSMORPHISM! */
+	/* Glassmorphism magic */
 	backdrop-filter: blur(12px) saturate(150%);
 	-webkit-backdrop-filter: blur(12px) saturate(150%);
 	
-	/* Borde sutil añade definición */
+	/* Subtle border adds definition */
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	
-	/* Esquinas redondeadas modernas */
+	/* Modern rounded corners */
 	border-radius: 20px;
 	
-	/* Profundidad con sombra interna y externa */
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
-	            inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+	/* Depth with internal and external shadows */
+	box-shadow: 
+		0 8px 32px 0 rgba(31, 38, 135, 0.37),
+		inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Aplicar glassmorphism al navbar */
+/* Apply glassmorphism to navbar */
 .navbar {
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(12px) saturate(150%);
@@ -82,7 +90,7 @@ body {
 	box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
 }
 
-/* Glassmorphism para secciones de fondo */
+/* Glassmorphism for background sections */
 .section-glass {
 	background: rgba(255, 255, 255, 0.08);
 	backdrop-filter: blur(10px) saturate(120%);
@@ -94,8 +102,8 @@ body {
    Future Theme Customizations
    -------------------------------------------------------------------------- */
 
-/* Espacio para añadir más design trends:
- * - Dark mode toggle
+/* Space for adding more design trends:
+ * - Dark mode toggle variations
  * - Neumorphism components
  * - Alternative color schemes
  * - Parallax effects
