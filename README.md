@@ -233,7 +233,9 @@ CREATIVE-PORTFOLIO-TEMPLATE/
 │   └── js/
 │       └── main.js         # GSAP animations (extensively commented)
 └── docs/
-    └── plan1.md            # AI agent development plan (if used)
+    ├── plan1.md            # GSAP animations development plan
+    ├── plan2.md            # Responsive layout plan
+    └── plan3.md            # Metadata optimization plan
 ```
 
 ### CSS Architecture (Barrel Pattern)
@@ -252,6 +254,27 @@ This organization makes it easy to:
 - Find and edit specific styles
 - Add new modules without touching existing code
 - Maintain a clean, scalable codebase
+
+---
+
+## 🤖 AI Usage Policy
+
+Generative AI tools were used as support tools, not as substitutes for understanding or decision-making.
+
+**Claude AI** was the primary tool used throughout this project for:
+- **Project review and quality assurance**: Reviewing code structure, identifying potential improvements, and ensuring best practices
+- **Concept clarification**: Reinforcing and explaining web development concepts covered in class, particularly responsive design principles, GSAP animations, and CSS architecture
+- **Project organization**: Planning and structuring the different phases of development, ensuring a logical workflow from foundation to final polish
+- **Template enhancement suggestions**: Proposing improvements for accessibility, performance, and user experience based on modern web standards
+- **Debugging assistance**: Helping identify and resolve issues when implementing specific features
+
+**ChatGPT** was used occasionally for:
+- **Generating placeholder content**: Creating temporary text for project descriptions and section content
+- **Documentation support**: Helping draft and structure README sections and technical documentation
+
+In all cases, AI-generated suggestions were only incorporated after being fully understood. Any code or solution was reviewed, adapted, and only used if I was confident that I could recreate it independently. AI was treated as a learning and productivity aid, while most technical decisions and implementations were guided by course materials and previously learned concepts, particularly for animations, fluid typography, and layout techniques.
+
+**Documentation of AI interactions**: Following the course's two-phase AI workflow requirement, all significant AI-assisted features were documented with development plans in the `docs/` folder before implementation.
 
 ---
 
@@ -290,7 +313,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
   - Email: [ruben.vega@udit.es](mailto:ruben.vega@udit.es)
 - **Student:** Henara Arribas
 - **Inspiration:** Modern web design trends from Awwwards, GSAP showcase gallery
-- **Placeholder Images:** [Picsum Photos](https://picsum.photos/)
+- **Placeholder Images:** [ImageKit.io](https://imagekit.io/)
 - **Icons:** SVG icons from [Heroicons](https://heroicons.com/)
 
 ### Special Thanks
@@ -366,4 +389,4 @@ See [Issues](https://github.com/henararribas/CREATIVE-PORTFOLIO-TEMPLATE/issues)
 - **No layout shift** (CLS: 0)
 - All animations GPU-accelerated using `transform` and `opacity`
 
----
+

@@ -1,0 +1,326 @@
+/* ==========================================================================
+   CSS-ONLY MODALS - No JavaScript Required
+   ========================================================================== */
+
+/**
+ * This modal system uses the CSS :target pseudo-class to show/hide modals
+ * When a user clicks a link with href="#project-1", that element becomes :target
+ * and CSS makes it visible. Clicking the close link removes the hash and hides it.
+ */
+
+/* --------------------------------------------------------------------------
+   Modal Container
+   -------------------------------------------------------------------------- */
+.css-modal {
+	/* Hidden by default */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	
+	/* Initially invisible and non-interactive */
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	
+	/* Smooth transitions */
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show modal when it's the :target */
+.css-modal:target {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Backdrop (Dark overlay)
+   -------------------------------------------------------------------------- */
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Dialog Container (Centers the modal)
+   -------------------------------------------------------------------------- */
+.modal-dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	overflow-y: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Content Box (The actual modal card)
+   -------------------------------------------------------------------------- */
+.modal-content-box {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	max-height: 90vh;
+	overflow-y: auto;
+	padding: 3rem;
+	margin: auto;
+	
+	/* Glassmorphism effect */
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(12px) saturate(150%);
+	-webkit-backdrop-filter: blur(12px) saturate(150%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 20px;
+	box-shadow: 
+		0 8px 32px 0 rgba(31, 38, 135, 0.37),
+		inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+	
+	/* Animation when modal appears */
+	transform: translateY(30px) scale(0.95);
+	transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Animate modal content when visible */
+.css-modal:target .modal-content-box {
+	transform: translateY(0) scale(1);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Close Button
+   -------------------------------------------------------------------------- */
+.modal-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	width: 48px;
+	height: 48px;
+	
+	/* Styling */
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(12px) saturate(150%);
+	-webkit-backdrop-filter: blur(12px) saturate(150%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	
+	/* Typography */
+	font-size: 2rem;
+	line-height: 1;
+	color: #ffffff;
+	text-decoration: none;
+	
+	/* Layout */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	/* Interaction */
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 10;
+}
+
+.modal-close:hover {
+	background: rgba(255, 255, 255, 0.25);
+	transform: rotate(90deg);
+	color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Content Elements
+   -------------------------------------------------------------------------- */
+.modal-title {
+	font-size: clamp(2rem, 4vw, 2.5rem);
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+	color: #ffffff;
+	padding-right: 3rem; /* Space for close button */
+}
+
+.modal-body {
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.modal-description {
+	font-size: 1.125rem;
+	line-height: 1.8;
+	margin-bottom: 2rem;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+/* --------------------------------------------------------------------------
+   Modal Image Gallery
+   -------------------------------------------------------------------------- */
+.modal-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.modal-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.gallery-item {
+	border-radius: 12px;
+	overflow: hidden;
+	aspect-ratio: 16/9;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   Technologies Section
+   -------------------------------------------------------------------------- */
+.modal-tech {
+	margin-bottom: 2rem;
+}
+
+.modal-tech h4 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: #ffffff;
+}
+
+.tech-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Modal Actions (Buttons)
+   -------------------------------------------------------------------------- */
+.modal-actions {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 2rem;
+}
+
+.modal-actions .btn {
+	flex: 1;
+	min-width: 200px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+	.modal-dialog {
+		padding: 1rem;
+	}
+	
+	.modal-content-box {
+		padding: 2rem 1.5rem;
+		max-height: 95vh;
+	}
+	
+	.modal-close {
+		width: 40px;
+		height: 40px;
+		top: 1rem;
+		right: 1rem;
+		font-size: 1.5rem;
+	}
+	
+	.modal-title {
+		font-size: 1.75rem;
+		padding-right: 2.5rem;
+	}
+	
+	.modal-gallery {
+		grid-template-columns: 1fr;
+	}
+	
+	.modal-actions .btn {
+		width: 100%;
+		min-width: unset;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Scrollbar Styling for Modal Content
+   -------------------------------------------------------------------------- */
+.modal-content-box::-webkit-scrollbar {
+	width: 8px;
+}
+
+.modal-content-box::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+}
+
+.modal-content-box::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+}
+
+.modal-content-box::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+	.css-modal,
+	.modal-content-box,
+	.modal-close,
+	.gallery-item img {
+		transition: none !important;
+		animation: none !important;
+	}
+	
+	.modal-content-box {
+		transform: none !important;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Fix: Prevent Body Scroll when Modal is Open
+   -------------------------------------------------------------------------- */
+.css-modal:target ~ body,
+body:has(.css-modal:target) {
+	overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Project Cards as Links
+   -------------------------------------------------------------------------- */
+a.project-card {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+a.project-card:hover {
+	text-decoration: none;
+	color: inherit;
+}

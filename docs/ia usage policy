@@ -1,0 +1,16 @@
+AI Usage Policy
+Generative AI tools were used as support tools, not as substitutes for understanding or decision-making.
+Claude AI was the primary tool used throughout this project for:
+
+Project review and quality assurance: Reviewing code structure, identifying potential improvements, and ensuring best practices
+Concept clarification: Reinforcing and explaining web development concepts covered in class, particularly responsive design principles, GSAP animations, and CSS architecture
+Project organization: Planning and structuring the different phases of development, ensuring a logical workflow from foundation to final polish
+Template enhancement suggestions: Proposing improvements for accessibility, performance, and user experience based on modern web standards
+Debugging assistance: Helping identify and resolve issues when implementing specific features
+
+ChatGPT was used occasionally for:
+
+Generating placeholder content: Creating temporary text for project descriptions and section content
+Documentation support: Helping draft and structure README sections and technical documentation
+
+In all cases, AI-generated suggestions were only incorporated after being fully understood. Any code or solution was reviewed, adapted, and only used if I was confident that I could recreate it independently. AI was treated as a learning and productivity aid, while most technical decisions and implementations were guided by course materials and previously learned concepts, particularly for animations, fluid typography, and layout techniques.
